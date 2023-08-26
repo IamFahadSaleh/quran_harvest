@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج الحصاد القرآني</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="images/16" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="loading" id="loading">
+        <div class="loader">
+            <div class="outer"></div>
+            <div class="middle"></div>
+            <div class="inner"></div>
+            <br>
+            <br>
+            <br><br><br><br>
+            <h2 style="color: #10B981;">انتظر التحميل</h2>
+        </div>
+    </div>
+    <iframe 
+        id="iframe" 
+        onload="onLoadframe()" 
+        style="display: none;" 
+        src="https://script.google.com/macros/s/AKfycbyARUmTvL-0F2VJR8MaWquDC3npzVog8JCaDPJdvD-QeUPX1QFJ9Xqj8h2QV7-s0yuK4w/exec"
+        frameborder="0"
+        width="100%"
+        height="100%"
+    >
+    </iframe>
+</body>
+
+<script>
+    function onLoadframe() {
+        setTimeout(() => {
+            loading.style = "display:none"
+            iframe.style = ""
+        }, 1000);
+    }
+</script>
+<script src="script.js"></script>
+</html>
